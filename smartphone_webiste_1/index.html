@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="" style="width: 50px; height: 50px;">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Phone</a>
+                    </li>
+                    <li>
+                        <a href="#">Accessories</a>
+                    </li>
+                    <li>
+                        <a href="#">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/output-onlinepngtools.png" alt="" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <!-- <img src="images/processor.png" alt="" style="opacity: 0.6;"> -->
+                    <i class="fa-3x fa fa-microchip"></i>
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon 845 Octa Core</p>
+                    </div>
+                
+                </div>
+                <div class="feature two">
+                    <!-- <img src="images/camera.png" alt="" style="opacity: 0.5;"> -->
+                    <i class="fa-3x fa fa-camera"></i>
+                    <div>
+                        <h1>Camera</h1>
+                        <p>16MP, Sony IMX-480 Quad Camera</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <!-- <img src="images/display.png" alt=""> -->
+                    <i class="fa-5x fa fa-tablet"></i>
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.3" Super Amoled Display</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <!-- <img src="images/battery.png" alt=""> -->
+                    <i class="fa-3x fa fa-battery-three-quarters"></i>
+                    <div>
+                        <h1>Battery</h1>
+                        <p>4000mah Lithium-ion 30W</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i class="fa fa-chevron-up" id="upBtn"></i>
+            <h3>Features</h3>
+            <i class="fa fa-chevron-down" id="downBtn"></i>
+        </div>
+        
+    </div>
+       
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(+90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
